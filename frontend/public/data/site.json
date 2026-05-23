@@ -1,0 +1,13 @@
+{
+  "name": "Talha Kenan",
+  "role": "Developer / Engineer",
+  "tagline": "Building fast, thoughtful software at the intersection of design and engineering.",
+  "bio": "I'm a full-stack developer obsessed with the craft of shipping. I work across the stack — from sharp UI to resilient APIs — and care deeply about typography, performance, and the small details that make a product feel inevitable.",
+  "location": "Istanbul, Turkey",
+  "available": true,
+  "skills": ["TypeScript", "React", "Next.js", "Python", "Node.js", "Tailwind CSS", "System Design"],
+  "github": "https://github.com",
+  "linkedin": "https://linkedin.com",
+  "twitter": "https://twitter.com",
+  "email": ""
+}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
-import { api, formatApiError } from "@/lib/api";
+
 
 export default function Contact({ site }) {
     const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -18,15 +18,22 @@ export default function Contact({ site }) {
         }
         setSubmitting(true);
         try {
-            const { data } = await api.post("/contact", form);
-            if (data.email_sent) {
+            const response = await fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(form)
+            });
+            if (response.ok) {
                 toast.success("Message sent. I'll reply soon.");
+                setForm({ name: "", email: "", subject: "", message: "" });
             } else {
-                toast.success("Message received. I'll be in touch.");
+                toast.error("Could not send. Try again.");
             }
-            setForm({ name: "", email: "", subject: "", message: "" });
         } catch (err) {
-            toast.error(formatApiError(err.response?.data?.detail) || "Could not send. Try again.");
+            toast.error("Could not send. Try again.");
         } finally {
             setSubmitting(false);
         }

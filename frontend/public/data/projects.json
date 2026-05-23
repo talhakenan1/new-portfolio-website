@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "title": "Helios Analytics",
+      "slug": "helios-analytics",
+      "summary": "Realtime product analytics platform with sub-100ms query latency.",
+      "description": "A complete rewrite of an internal analytics stack. Designed an event ingestion pipeline backed by ClickHouse, a Python aggregation service, and a React dashboard with custom visualization primitives.",
+      "tech": ["TypeScript", "React", "Python", "ClickHouse", "Redis"],
+      "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+      "live_url": "https://example.com",
+      "github_url": "https://github.com",
+      "featured": true,
+      "year": "2025"
+    },
+    {
+      "title": "Cartograph",
+      "slug": "cartograph",
+      "summary": "A graph-first knowledge base for engineering teams.",
+      "description": "Document graph with bidirectional links, full-text search, and a custom WYSIWYG editor built on top of TipTap.",
+      "tech": ["Next.js", "PostgreSQL", "TipTap", "tRPC"],
+      "image_url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80",
+      "live_url": "https://example.com",
+      "github_url": "https://github.com",
+      "featured": true,
+      "year": "2024"
+    }
+  ]
+}

@@ -5,15 +5,15 @@ import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/Footer";
-import { api } from "@/lib/api";
+
 
 export default function HomePage() {
     const [site, setSite] = useState(null);
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        api.get("/site").then((r) => setSite(r.data)).catch(() => {});
-        api.get("/projects").then((r) => setProjects(r.data)).catch(() => {});
+        fetch("/data/site.json").then((r) => r.json()).then(setSite).catch(() => {});
+        fetch("/data/projects.json").then((r) => r.json()).then(d => setProjects(d.projects)).catch(() => {});
     }, []);
 
     if (!site) {

@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: talhakenan1/new-portfolio-website
+  branch: main
+
+media_folder: "frontend/public/images"
+public_folder: "/images"
+
+collections:
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Site Content"
+        name: "site"
+        file: "frontend/public/data/site.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Role", name: "role", widget: "string"}
+          - {label: "Tagline", name: "tagline", widget: "string"}
+          - {label: "Bio", name: "bio", widget: "text"}
+          - {label: "Location", name: "location", widget: "string"}
+          - {label: "Available", name: "available", widget: "boolean"}
+          - {label: "Skills", name: "skills", widget: "list"}
+          - {label: "GitHub URL", name: "github", widget: "string"}
+          - {label: "LinkedIn URL", name: "linkedin", widget: "string"}
+          - {label: "Twitter URL", name: "twitter", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+
+      - label: "Projects"
+        name: "projects"
+        file: "frontend/public/data/projects.json"
+        fields:
+          - label: "Projects List"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Slug", name: "slug", widget: "string"}
+              - {label: "Summary", name: "summary", widget: "text"}
+              - {label: "Description", name: "description", widget: "markdown"}
+              - {label: "Tech Stack", name: "tech", widget: "list"}
+              - {label: "Image", name: "image_url", widget: "image", required: false}
+              - {label: "Live URL", name: "live_url", widget: "string", required: false}
+              - {label: "GitHub URL", name: "github_url", widget: "string", required: false}
+              - {label: "Featured", name: "featured", widget: "boolean"}
+              - {label: "Year", name: "year", widget: "string"}

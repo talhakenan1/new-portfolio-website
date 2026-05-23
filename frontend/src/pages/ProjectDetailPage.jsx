@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
-import { api } from "@/lib/api";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -12,9 +12,14 @@ export default function ProjectDetailPage() {
     const [notFound, setNotFound] = useState(false);
 
     useEffect(() => {
-        api.get("/site").then((r) => setSite(r.data)).catch(() => {});
-        api.get(`/projects/${slug}`)
-            .then((r) => setProject(r.data))
+        fetch("/data/site.json").then((r) => r.json()).then(setSite).catch(() => {});
+        fetch("/data/projects.json")
+            .then((r) => r.json())
+            .then((data) => {
+                const found = data.projects.find((p) => p.slug === slug);
+                if (found) setProject(found);
+                else setNotFound(true);
+            })
             .catch(() => setNotFound(true));
     }, [slug]);
 
