@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const PORTRAIT =
-    "https://static.prod-images.emergentagent.com/jobs/fa030bf2-d494-4085-8cdd-d7d2f00b8c72/images/50ffae79372b4e4b6f84a4ae44593b7e9ead9fcf323eadb401dbf9e64a603fca.png";
+const PORTRAIT = "/images/portrait.jpg";
 
 export default function About({ site }) {
     return (
@@ -90,11 +89,11 @@ export default function About({ site }) {
                     {/* Stats row */}
                     <div className="mt-16 grid grid-cols-2 sm:grid-cols-3 gap-8 border-t border-ink/10 pt-10">
                         <div>
-                            <div className="font-display text-5xl lg:text-6xl">7+</div>
+                            <div className="font-display text-5xl lg:text-6xl">1+</div>
                             <div className="kicker-num mt-2">Years shipping</div>
                         </div>
                         <div>
-                            <div className="font-display text-5xl lg:text-6xl">40+</div>
+                            <div className="font-display text-5xl lg:text-6xl">10+</div>
                             <div className="kicker-num mt-2">Projects delivered</div>
                         </div>
                         <div>

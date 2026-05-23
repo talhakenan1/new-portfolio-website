@@ -2,8 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
 
-const HERO_IMG =
-    "https://static.prod-images.emergentagent.com/jobs/fa030bf2-d494-4085-8cdd-d7d2f00b8c72/images/b9d2e6e8db3f6b1b0a235a5269df0878932ff811d8f24b9119b47a99ccf3571e.png";
+const HERO_IMG = "/images/servers.jpg";
 
 const fade = {
     hidden: { opacity: 0, y: 40 },
