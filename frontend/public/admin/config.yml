@@ -2,6 +2,8 @@ backend:
   name: github
   repo: talhakenan1/new-portfolio-website
   branch: main
+  base_url: https://cms-oauth-proxy-three.vercel.app
+  auth_endpoint: /api/auth
 
 media_folder: "frontend/public/images"
 public_folder: "/images"
