@@ -1,0 +1,109 @@
+/* Editorial portfolio - global tweaks */
+
+.App {
+    min-height: 100vh;
+}
+
+/* Custom selection block already in index.css */
+
+/* Big editorial number column */
+.kicker-num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: #52525b;
+}
+
+/* Editorial input style */
+.editorial-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #0a0a0a;
+    border-radius: 0;
+    padding: 14px 0;
+    width: 100%;
+    font-size: 1.05rem;
+    font-family: "Outfit", sans-serif;
+    color: #0a0a0a;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+.editorial-input::placeholder {
+    color: #a1a1aa;
+}
+.editorial-input:focus {
+    border-bottom-color: #e53935;
+}
+.editorial-textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Hard rectangular button */
+.btn-ink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 28px;
+    background: #0a0a0a;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+.btn-ink:hover {
+    background: #e53935;
+}
+.btn-ink:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 24px;
+    border: 1px solid #0a0a0a;
+    background: transparent;
+    color: #0a0a0a;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+.btn-outline:hover {
+    background: #0a0a0a;
+    color: #fff;
+}
+
+/* Section grid lines */
+.section-divider {
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Editorial figure */
+.fig-caption {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #52525b;
+}
+
+/* The big italic word emphasis */
+.italic-emphasis {
+    font-style: italic;
+    font-weight: 400;
+}

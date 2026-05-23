@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 4%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 4%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 4%;
+        --primary: 0 0% 4%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 0 0% 96%;
+        --secondary-foreground: 0 0% 9%;
+        --muted: 0 0% 96%;
+        --muted-foreground: 240 4% 38%;
+        --accent: 0 76% 56%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --ring: 0 0% 4%;
+        --radius: 0rem;
+    }
+    .dark {
+        --background: 0 0% 4%;
+        --foreground: 0 0% 100%;
+        --card: 0 0% 7%;
+        --card-foreground: 0 0% 100%;
+        --popover: 0 0% 7%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 0 0% 100%;
+        --primary-foreground: 0 0% 4%;
+        --secondary: 0 0% 14%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 0 0% 14%;
+        --muted-foreground: 240 5% 65%;
+        --accent: 0 76% 56%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 63% 31%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 4% 16%;
+        --input: 240 4% 16%;
+        --ring: 0 0% 83%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family:
+            "Outfit",
+            -apple-system,
+            BlinkMacSystemFont,
+            sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: "ss01", "cv11";
+    }
+    ::selection {
+        background-color: #e53935;
+        color: #fff;
+    }
+}
+
+@layer utilities {
+    .font-display {
+        font-family: "Playfair Display", Georgia, serif;
+        font-feature-settings: "ss01", "kern";
+    }
+    .font-mono {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+    }
+    .text-balance {
+        text-wrap: balance;
+    }
+    .label-kicker {
+        font-family: "Outfit", sans-serif;
+        font-size: 0.7rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .editorial-rule {
+        height: 1px;
+        background: currentColor;
+        opacity: 0.15;
+    }
+    .marquee {
+        animation: marquee 40s linear infinite;
+    }
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+    .grain::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+        opacity: 0.06;
+        mix-blend-mode: multiply;
+    }
+    .img-hover-color {
+        filter: grayscale(100%) contrast(1.05);
+        transition: filter 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .img-hover-color:hover {
+        filter: grayscale(0%) contrast(1);
+    }
+    .red-underline {
+        background-image: linear-gradient(
+            transparent calc(100% - 2px),
+            #e53935 2px
+        );
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        transition: background-size 400ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .red-underline:hover {
+        background-size: 100% 100%;
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+}

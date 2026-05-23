@@ -1,0 +1,101 @@
+{
+  "project_name": "Talha Kenan Developer Portfolio",
+  "theme": "Light",
+  "archetype": "4 (Swiss & High-Contrast / Editorial)",
+  "vibe": "Bold editorial / magazine-style, confident, authoritative, artistic yet technical.",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F9F9F9",
+    "surface_glass": "rgba(255, 255, 255, 0.8)",
+    "text_primary": "#0A0A0A",
+    "text_secondary": "#52525B",
+    "accent_primary": "#E53935",
+    "border": "#E5E7EB",
+    "dark_mode": {
+      "background": "#0A0A0A",
+      "surface": "#121212",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#A1A1AA",
+      "border": "#27272A"
+    }
+  },
+  "typography": {
+    "primary_heading_font": "Playfair Display",
+    "secondary_body_font": "Outfit",
+    "rules": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter leading-none font-black",
+      "h2": "text-4xl sm:text-5xl tracking-tight leading-none",
+      "h3": "text-2xl sm:text-3xl font-semibold",
+      "body": "text-base sm:text-lg leading-relaxed text-[#52525B]",
+      "labels": "text-xs uppercase tracking-[0.2em] font-bold text-[#E53935]"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing, Asymmetry, Grid Borders, Massive Typography, High Contrast.",
+    "container_padding": "p-8 sm:p-12 md:p-24",
+    "grid_system": "Bento Grid (Tetris) for Projects, strict table grids for Admin Dashboard.",
+    "alignment": "Left-aligned dominant, optical alignment for icons.",
+    "borders": "Expose the skeleton for tech sections. 1px solid #E5E7EB for technical data, borders completely removed for editorial text sections."
+  },
+  "components_strategy": {
+    "marketing_pages": "Pure HTML/Tailwind for layouts, overlapping elements. Framer Motion for scroll triggers.",
+    "admin_dashboard": "Shadcn UI (Tables, Dialogs, Cards, Forms). Sharp edges, dense data, monochrome with red accents.",
+    "buttons": "Editorial style: hard rectangles, 0px border-radius, pure black background, white text. Hover: pure red background.",
+    "icons": "@phosphor-icons/react (Duotone or Light weight)"
+  },
+  "motion_and_interaction": {
+    "hover_states": "Images go from grayscale to full color on hover. Text links get a thick red underline.",
+    "scroll_effects": "Lenis smooth scrolling mandatory. Parallax on hero image.",
+    "page_transitions": "Staggered fade-in for massive typography lines."
+  },
+  "pages_and_sections": {
+    "hero": {
+      "layout": "Massive typography 'TALHA KENAN' taking 90% of screen width. Mixed italic and standard fonts. Overlapping 'hero_abstract' image on the right edge. 'Developer / Engineer' label.",
+      "visuals": "hero_abstract image as a dramatic architectural accent, parallaxing behind or beside text."
+    },
+    "about": {
+      "layout": "Grid-cols-1 md:grid-cols-12. Portrait ('about_portrait') spanning 5 columns. Bio text spanning 6 columns with massive H2. Skills listed as an 'Editorial Ribbon' or clean lowercase list.",
+      "visuals": "about_portrait"
+    },
+    "projects": {
+      "layout": "Asymmetric Bento Grid or massive stacked rows. Large images (project_placeholder). Clicking goes to detail page. Hover states are critical (grayscale to color).",
+      "visuals": "project_placeholder"
+    },
+    "contact": {
+      "layout": "High-contrast form. Huge 'Let's Talk' H2. Real form using Shadcn inputs (heavily styled: border-b only, no full boxes). Form sends via Resend.",
+      "visuals": "contact_footer image as a background accent."
+    },
+    "admin_login": {
+      "layout": "Minimalist center card. High contrast, pure black button."
+    },
+    "admin_dashboard": {
+      "layout": "Control Room Grid. Sidebar navigation. Tables for CRUD projects, forms for editing site content.",
+      "components": "Shadcn Data Tables, Dialogs, Tabs, Forms."
+    }
+  },
+  "images": [
+    {
+      "url": "https://static.prod-images.emergentagent.com/jobs/fa030bf2-d494-4085-8cdd-d7d2f00b8c72/images/b9d2e6e8db3f6b1b0a235a5269df0878932ff811d8f24b9119b47a99ccf3571e.png",
+      "category": "hero",
+      "description": "Abstract architectural composition for hero section backdrop or accent."
+    },
+    {
+      "url": "https://static.prod-images.emergentagent.com/jobs/fa030bf2-d494-4085-8cdd-d7d2f00b8c72/images/50ffae79372b4e4b6f84a4ae44593b7e9ead9fcf323eadb401dbf9e64a603fca.png",
+      "category": "about",
+      "description": "Moody, cinematic portrait of Talha Kenan in a modern studio."
+    },
+    {
+      "url": "https://static.prod-images.emergentagent.com/jobs/fa030bf2-d494-4085-8cdd-d7d2f00b8c72/images/f5f15c9405a929b4ec7c1ff43b85355fbf8a02d59094c38ec374b0a86cabe7f0.png",
+      "category": "project_placeholder",
+      "description": "Abstract digital UI/UX art for project thumbnails."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3R1cmFsJTIwbW9kZXJuJTIwd29ya3NwYWNlfGVufDB8fHx8MTc3OTU1MjQ2OHww&ixlib=rb-4.1.0&q=85",
+      "category": "contact_footer",
+      "description": "Architectural modern workspace for footer/contact area visual anchor."
+    }
+  ],
+  "testing_attributes": {
+    "rule": "All interactive elements MUST include data-testid. Examples: data-testid='contact-submit-button', data-testid='admin-login-button'."
+  }
+}
