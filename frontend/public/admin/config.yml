@@ -2,7 +2,7 @@ backend:
   name: github
   repo: talhakenan1/new-portfolio-website
   branch: main
-  base_url: https://cms-oauth-proxy-three.vercel.app
+  base_url: https://usscla2yiahlh4iln2qu5z6tou0xgivv.lambda-url.us-east-1.on.aws
 
 media_folder: "frontend/public/images"
 public_folder: "/images"
