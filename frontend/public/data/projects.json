@@ -38,6 +38,24 @@
       "year": "2025"
     },
     {
+      "summary": "JobDetected is an intelligent prediction and classification platform that analyzes the text of job postings on the market (job descriptions, titles, etc.) using Natural Language Processing (NLP) and Machine Learning algorithms.",
+      "image_url": "/images/jobdetected.png",
+      "slug": "The primary focus is on seamlessly integrating classic web technologies with Python-based data science models under a single product framework.",
+      "featured": true,
+      "github_url": "https://github.com/talhakenan1/JobDetected",
+      "tech": [
+        "Python",
+        "React",
+        "Node.js",
+        "Javascript",
+        "Docker"
+      ],
+      "title": "Job Detected",
+      "live_url": "http://job.89.168.70.18.nip.io/login",
+      "description": "# Technology Stack\n\n## Client and Web Server Layer\n\n* Core Framework: Node.js (Server) and React (Frontend)\n* Containerization: The application’s web layer is fully containerized using Docker (image-based via ghcr.io), ensuring portability and platform independence.\n* Security: End-to-end encrypted Session Secret configurations and CORS optimizations are used for user session management.\n\n## Machine Learning and API Layer\n\n* Prediction Engine: Python-based algorithms have been developed for data analysis and model inference.\n* Microservice Integration: The Python model is deployed as an independent REST API (microservice) on the PythonAnywhere cloud infrastructure, rather than being embedded within the main Node.js application.\n* Communication: Job posting texts received from the client are sent to the Python API via Node.js as asynchronous (Promise/fetch) requests, and the AI’s prediction is displayed on the screen in real time.\n\n## Architectural Approach and Microservice Separation\n\n> **TIP**\n>\n> Why Were Python and Node.js Separated? Machine learning models consume significant amounts of CPU and memory (RAM). To prevent the Node.js application managing web traffic from slowing down due to AI processing, the \"Separation of Concerns\" principle was applied. While the web layer runs on a separate VPS (using Docker and Nginx), the CPU-intensive prediction layer is hosted as an isolated service (microservice) on PythonAnywhere.\n\n## Deployment and Nginx Optimizations\n\n* The entire system is managed on an Ubuntu VPS using an Nginx reverse proxy.\n* Nginx handles traffic coming to the jobdetected:3000 port, establishing a secure and fast communication channel.\n* The Nginx configuration is designed with Dynamic Resolution, providing fault tolerance to prevent other projects (Quote CRM, Optivision, etc.) from being affected in the event of a potential outage in one part of the system.\n\n## Challenges Encountered and Solution Strategies\n\n\"Network Latency and Timeout Management,\" one of the most fundamental challenges of microservice architectures, was encountered in this project and shaped the system’s architectural decisions.\n\n> **NOTE**\n>\n> Cloud Service Sleep Mode and Timeout Management The project’s forecasting API was deployed on PythonAnywhere for cost optimization purposes. Due to third-party cloud providers’ (PaaS) periodic \"Cold Start\" (sleep mode) or freezing policies, the API server may occasionally return 404/504 (Gateway Timeout) responses.\n>\n> This is not a technical coding error but a result of asynchronous wait times in microservice communication between servers. In real-world scenarios (Production), system flexibility has been enhanced by integrating an automatic retry mechanism on the web side or user-friendly \"Service Under Maintenance\" messages for such \"API Unavailable\" situations.",
+      "year": "2023"
+    },
+    {
       "summary": "Realtime product analytics platform with sub-100ms query latency.",
       "image_url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
       "slug": "helios-analytics",
