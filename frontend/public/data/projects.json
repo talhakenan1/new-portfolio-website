@@ -38,6 +38,24 @@
       "year": "2025"
     },
     {
+      "summary": "The project uses dynamic QR code generation to assign a digital identity to a physical package. The goal is to demonstrate how complex logistics processes can be digitized using fast, lightweight tools that do not overload servers (Proof of Concept).",
+      "image_url": "/images/pakettakip.png",
+      "slug": "The GPS QR Code-Based Shipping/Package Tracking System is a prototype system developed for freight, courier, or field service operations that provides \"location-based\" tracking, even if it is not real-time.",
+      "featured": true,
+      "github_url": "https://github.com/talhakenan1/gpstakipdemo",
+      "tech": [
+        "SQLite",
+        "Node.js",
+        "Express.js",
+        "RESTfulAPI",
+        "Javascript"
+      ],
+      "title": "GPS Tracking",
+      "live_url": "https://gpstakipdemo.onrender.com/",
+      "description": "# Technology Stack\n\n## Server Layer\n\n* **Framework & Language:** Node.js, Express.js\n* **Database:** SQLite\n* **Utility Libraries:**\n* qrcode (Instant visual code generation for packages)\n* uuid (To generate unpredictable, unique package tracking IDs)\n\n## Client Layer\n\n* **Architecture:** Monolithic Server-Side Rendering architecture. By opting for a static client architecture instead of a classic SPA (Single Page Application), page load speeds (First Contentful Paint) have been maximized.\n* **Design:** A \"vanilla\" interface has been developed using only basic HTML/CSS/JS, free from dependencies and with zero risk of deprecation in the long term.\n\n## Architectural Approach\n\n> **TIP**\n>\n> Why Was SQLite Chosen Instead of PostgreSQL or MySQL? The goal of this project is to deploy a \"Demo/Prototype\" as quickly as possible. SQLite stores data directly on the server disk within a single file (.sqlite or .db) without requiring database setup or network connectivity (network latency). By selecting the better-sqlite3 library, which delivers high performance especially for read operations, the system’s latency has been reduced to milliseconds.\n\n* **Unique Code and Encryption (UUID & QR):** A unique UUIDv4 number, which is difficult to guess, is generated in the background for each shipment/package, and this number is directly converted into a QR code. When the courier scans the code, the routes in the system are updated instantly.\n* **RESTful API Design:** The frontend and backend directory structures (public, routes, data) are modularly separated; the server.js file has been kept minimal, serving only as a bridge.\n\n## Deployment\n\nThis project was deployed on the Render.com cloud platform with a focus on cost optimization.\n\n**1. Continuous Integration (CI/CD):**\n\n• A webhook connection has been established between the GitHub repository and the Render platform. Every \\`git push\\` command made by the developer to the main branch is automatically detected by Render, the project is built from scratch, and it is deployed with zero downtime within minutes.\n\n**2. Ephemeral Storage Management:**\n\n• Cloud platforms like Render and Heroku, in their free or entry-level plans, clear disk data every time a container goes to sleep (Ephemeral Disk). The SQLite approach in this project is a strategic decision that turns this system limitation into an advantage, ensuring users testing during the \"Demo\" phase receive a fresh experience every time.\n\n**3. Node.js Optimization:**\n\n• The project’s main startup command is set to \\`node server.js\\`, and it runs as a lightweight Node.js instance that does not exceed memory limits.",
+      "year": "2026"
+    },
+    {
       "summary": "JobDetected is an intelligent prediction and classification platform that analyzes the text of job postings on the market (job descriptions, titles, etc.) using Natural Language Processing (NLP) and Machine Learning algorithms.",
       "image_url": "/images/jobdetected.png",
       "slug": "The primary focus is on seamlessly integrating classic web technologies with Python-based data science models under a single product framework.",
