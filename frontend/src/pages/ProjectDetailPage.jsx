@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -129,9 +130,9 @@ export default function ProjectDetailPage() {
                     </div>
                     <div className="col-span-12 lg:col-span-8">
                         <div className="kicker-num mb-3">About this project</div>
-                        <p className="font-display text-2xl sm:text-3xl leading-snug text-ink/90 whitespace-pre-wrap">
-                            {project.description}
-                        </p>
+                        <div className="prose prose-lg prose-headings:font-display prose-headings:font-normal prose-a:text-signal hover:prose-a:text-signal/80 transition-colors max-w-none text-ink/90 prose-img:rounded-md prose-img:border prose-img:border-ink/10">
+                            <ReactMarkdown>{project.description}</ReactMarkdown>
+                        </div>
                     </div>
                 </div>
             </article>
